@@ -1,12 +1,29 @@
 # Medical QA RAG System using LangChain
 
-##  Features
-- LangChain-based RAG pipeline
-- FAISS vector store
-- Embeddings: all-MiniLM-L6-v2
-- LLM: Gemini-2.5-flash
-- Streamlit interface
-- `.uv` compatible setup (no venv needed)
+## Features
+ PDF Document Parsing
+Automatically extracts and preprocesses content from PDFs for semantic understanding.
+
+ Semantic Search with FAISS
+Uses vector similarity search to retrieve the most relevant document chunks based on your query.
+
+ Retrieval-Augmented Generation (RAG)
+Combines context-aware retrieval with a powerful LLM to generate accurate, grounded answers.
+
+ Natural Language Question Answering
+Ask complex questions and get human-like, coherent answers tailored to your document.
+
+ Environment-Variable Secured API Keys
+Uses .env file to safely manage access credentials for cloud-based LLMs.
+
+ Lightweight and Fast
+Efficient embedding model (MiniLM-L6-v2) and FAISS make local retrieval quick and scalable.
+
+ Modular Codebase
+Clear separation between ingestion, vector storage, and querying logic—easy to extend or plug in another LLM.
+
+ Fully Local Embedding & Storage
+Embedding and vector storage are done locally, ensuring faster retrieval and data control.
 
 ##  Tools Used
 - LangChain
