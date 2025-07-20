@@ -20,6 +20,7 @@ def load_vectorstore(path="vectorstore"):
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     return FAISS.load_local(path, embeddings, allow_dangerous_deserialization=True)
 
+## Loading LLM for generating responses
 def load_llm():
     return ChatGoogleGenerativeAI(
         model="gemini-2.5-flash",
@@ -41,6 +42,7 @@ def answer_query(query_text):
     qa = RetrievalQA.from_chain_type(llm=llm, retriever=retriever, return_source_documents=False)
     return qa.run(query_text) # Run the QA chain
 
+# Getting final response
 if __name__ == "__main__":
     query = "Give me the correct coded classification for the following diagnosis: Recurrent depressive disorder, currently in remission"
     print("Answer:", answer_query(query))

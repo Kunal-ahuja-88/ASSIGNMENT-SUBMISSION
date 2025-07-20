@@ -34,7 +34,7 @@ def ingest(path="data/sample_pdf.pdf", faiss_path="vectorstore"):
 
     # Step 6: Save the vector store to disk for later retrieval
     db.save_local(faiss_path)
-    print(f"✅ Ingestion complete and saved to {faiss_path}")
+    print(f"Ingestion complete and saved to {faiss_path}")
 
 if __name__ == "__main__":
     ingest()
