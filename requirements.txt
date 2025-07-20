@@ -1,0 +1,14 @@
+langchain
+faiss-cpu
+sentence-transformers
+transformers
+accelerate
+torch
+PyMuPDF
+streamlit
+langchain-community>=0.0.21
+langchain-huggingface
+faiss-cpu
+python-dotenv
+langchain-google-genai
+google-generativeai
